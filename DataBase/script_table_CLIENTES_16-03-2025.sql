@@ -4,6 +4,7 @@ CREATE TABLE dbapa.clientes(
   nm_cliente            VARCHAR2(100)                NOT NULL,
   cpf_cliente           NUMBER(11)                   NULL,
   email_cliente         VARCHAR2(80)                 NOT NULL,
+  sh_cliente            VARCHAR2(255)                NOT NULL,
   fone_contato          VARCHAR2(20)                 NOT NULL,
   endereco_cliente      VARCHAR2(100)                NOT NULL,
   bairro_cliente        VARCHAR2(90)                 NOT NULL,

@@ -10,7 +10,7 @@ CREATE TABLE dbapa.empresas (
 /
 
 ALTER TABLE dbapa.empresas
-  ADD CONSTRAINT me_pk PRIMARY KEY (
+  ADD CONSTRAINT cd_empresa_pk PRIMARY KEY (
     cd_empresa
   )
   USING INDEX
