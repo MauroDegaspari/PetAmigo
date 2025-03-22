@@ -1,0 +1,10 @@
+package br.com.petamigo.login.api.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/loginPetAmigo")
+public class AcessoClienteController {
+
+}

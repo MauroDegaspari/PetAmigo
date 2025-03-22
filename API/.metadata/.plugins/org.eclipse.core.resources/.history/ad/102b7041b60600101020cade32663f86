@@ -1,0 +1,22 @@
+package br.com.petamigo.login.api.controller;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import br.com.petamigo.login.infrastruture.model.AcessoClienteModel;
+
+@Controller
+@RequestMapping("/loginPetAmigo")
+public class AcessoClienteController {
+	
+	@GetMapping(value = "/listarTodos")
+	public ResponseEntity<List<AcessoClienteModel>> testeCLientes(){
+		return null;
+	}
+	
+
+}
