@@ -1,0 +1,24 @@
+package br.com.petamigo.login.domain.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import br.com.petamigo.login.infrastruture.model.AcessoClienteModel;
+import br.com.petamigo.login.infrastruture.repository.AcessoClienteRepository;
+
+@Service
+public class AcessoClienteService {
+	
+	@Autowired
+	 private AcessoClienteRepository repo; 
+	
+	@Transactional(readOnly = true)
+	public List<AcessoClienteModel> testeListendoCLienteService(){
+		 List<AcessoClienteModel> clientes = repo.findAll();
+		 
+		 return clientes;
+	}
+}

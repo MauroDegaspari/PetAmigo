@@ -1,0 +1,5 @@
+package br.com.petamigo.login.infrastruture.model;
+
+public class AcessoCliente {
+
+}
