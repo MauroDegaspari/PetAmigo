@@ -170,12 +170,12 @@ public class AcessoClienteModel {
 	    }
 
 	   
-	    @Override
-	    public String toString() {
-	        return "Cliente [cdCliente=" + cdCliente + ", cdEmpresa=" + cdEmpresa + ", nmCliente=" + nmCliente
-	                + ", cpfCliente=" + cpfCliente + ", emailCliente=" + emailCliente + ", shCliente=" + shCliente
-	                + ", foneContato=" + foneContato + ", enderecoCliente=" + enderecoCliente + ", bairroCliente="
-	                + bairroCliente + ", cidadeCliente=" + cidadeCliente + ", ufCliente=" + ufCliente + ", cepCliente="
-	                + cepCliente + ", dtCadastroCliente=" + dtCadastroCliente + ", obsCliente=" + obsCliente + "]";
-	    }
+//	    @Override
+//	    public String toString() {
+//	        return "Cliente [cdCliente=" + cdCliente + ", cdEmpresa=" + cdEmpresa + ", nmCliente=" + nmCliente
+//	                + ", cpfCliente=" + cpfCliente + ", emailCliente=" + emailCliente + ", shCliente=" + shCliente
+//	                + ", foneContato=" + foneContato + ", enderecoCliente=" + enderecoCliente + ", bairroCliente="
+//	                + bairroCliente + ", cidadeCliente=" + cidadeCliente + ", ufCliente=" + ufCliente + ", cepCliente="
+//	                + cepCliente + ", dtCadastroCliente=" + dtCadastroCliente + ", obsCliente=" + obsCliente + "]";
+//	    }
 	}
