@@ -1,0 +1,9 @@
+package br.com.petamigo.login.infrastruture.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.petamigo.login.infrastruture.model.AcessoFuncionarioModel;
+
+public interface AcessoFuncionarioRepository extends JpaRepository<AcessoFuncionarioModel, Integer> {
+
+}

@@ -1,0 +1,418 @@
+package br.com.petamigo.login.infrastruture.model;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+
+@Entity
+@Table()
+public class AcessoFuncionarioModel {
+	
+	@Id
+    @Column(name = "cd_func")
+    private Long cdFunc;
+
+    @Column(name = "cd_empresa", nullable = false)
+    private Long cdEmpresa;
+
+    @Column(name = "nm_func", nullable = false, length = 100)
+    private String nome;
+
+    @Column(name = "data_nascim_func", nullable = false)
+    private LocalDate dataNascimento;
+
+    @Column(name = "sexo_func", nullable = false, length = 1)
+    private String sexo;
+
+    @Column(name = "estado_civil", length = 20)
+    private String estadoCivil;
+
+    @Column(name = "nacionalidade", length = 50)
+    private String nacionalidade;
+
+    @Column(name = "cpf", nullable = false, length = 11)
+    private String cpf;
+
+    @Column(name = "rg", length = 20)
+    private String rg;
+
+    @Column(name = "titulo_eleitor", length = 20)
+    private String tituloEleitor;
+
+    @Column(name = "endereco_func", length = 200)
+    private String endereco;
+
+    @Column(name = "sh_cliente", nullable = false, length = 255)
+    private String shCliente;
+
+    @Column(name = "telefone_func", length = 20)
+    private String telefone;
+
+    @Column(name = "email_func", nullable = false, length = 100)
+    private String email;
+
+    @Column(name = "sn_ativo_func", nullable = false, length = 1)
+    private String ativo = "S";
+
+    @Column(name = "nome_contato_emergencia", length = 100)
+    private String contatoEmergencia;
+
+    @Column(name = "parentesco_emergencia", length = 50)
+    private String parentescoEmergencia;
+
+    @Column(name = "telefone_emergencia", length = 20)
+    private String telefoneEmergencia;
+
+    @Column(name = "banco", length = 50)
+    private String banco;
+
+    @Column(name = "agencia", length = 10)
+    private String agencia;
+
+    @Column(name = "conta_corrente", length = 20)
+    private String contaCorrente;
+
+    @Column(name = "cargo", length = 100)
+    private String cargo;
+
+    @Column(name = "departamento", length = 100)
+    private String departamento;
+
+    @Column(name = "data_admissao", nullable = false)
+    private LocalDate dataAdmissao;
+
+    @Column(name = "jornada_trabalho", length = 50)
+    private String jornadaTrabalho;
+
+    @Column(name = "tipo_contrato", length = 50)
+    private String tipoContrato;
+
+    @Column(name = "salario", precision = 10, scale = 2)
+    private BigDecimal salario;
+
+    @Lob
+    @Column(name = "beneficios")
+    private String beneficios;
+
+    @Column(name = "local_trabalho", length = 200)
+    private String localTrabalho;
+
+    @Column(name = "regime_trabalho", length = 20)
+    private String regimeTrabalho;
+
+    @Column(name = "data_assinatura_contrato")
+    private LocalDate dataAssinaturaContrato;
+
+    @Column(name = "exame_admissional", length = 1)
+    private String exameAdmissional;
+
+    @Column(name = "comprovante_endereco", length = 1)
+    private String comprovanteEndereco;
+
+    @Column(name = "foto_func", length = 1)
+    private String fotoFunc;
+
+    @Column(name = "dependentes", length = 1)
+    private String dependentes;
+
+    @Lob
+    @Column(name = "observacoes")
+    private String observacoes;
+
+	public Long getCdFunc() {
+		return cdFunc;
+	}
+
+	public void setCdFunc(Long cdFunc) {
+		this.cdFunc = cdFunc;
+	}
+
+	public Long getCdEmpresa() {
+		return cdEmpresa;
+	}
+
+	public void setCdEmpresa(Long cdEmpresa) {
+		this.cdEmpresa = cdEmpresa;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public String getEstadoCivil() {
+		return estadoCivil;
+	}
+
+	public void setEstadoCivil(String estadoCivil) {
+		this.estadoCivil = estadoCivil;
+	}
+
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getRg() {
+		return rg;
+	}
+
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	public String getTituloEleitor() {
+		return tituloEleitor;
+	}
+
+	public void setTituloEleitor(String tituloEleitor) {
+		this.tituloEleitor = tituloEleitor;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getShCliente() {
+		return shCliente;
+	}
+
+	public void setShCliente(String shCliente) {
+		this.shCliente = shCliente;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(String ativo) {
+		this.ativo = ativo;
+	}
+
+	public String getContatoEmergencia() {
+		return contatoEmergencia;
+	}
+
+	public void setContatoEmergencia(String contatoEmergencia) {
+		this.contatoEmergencia = contatoEmergencia;
+	}
+
+	public String getParentescoEmergencia() {
+		return parentescoEmergencia;
+	}
+
+	public void setParentescoEmergencia(String parentescoEmergencia) {
+		this.parentescoEmergencia = parentescoEmergencia;
+	}
+
+	public String getTelefoneEmergencia() {
+		return telefoneEmergencia;
+	}
+
+	public void setTelefoneEmergencia(String telefoneEmergencia) {
+		this.telefoneEmergencia = telefoneEmergencia;
+	}
+
+	public String getBanco() {
+		return banco;
+	}
+
+	public void setBanco(String banco) {
+		this.banco = banco;
+	}
+
+	public String getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(String agencia) {
+		this.agencia = agencia;
+	}
+
+	public String getContaCorrente() {
+		return contaCorrente;
+	}
+
+	public void setContaCorrente(String contaCorrente) {
+		this.contaCorrente = contaCorrente;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+
+	public String getDepartamento() {
+		return departamento;
+	}
+
+	public void setDepartamento(String departamento) {
+		this.departamento = departamento;
+	}
+
+	public LocalDate getDataAdmissao() {
+		return dataAdmissao;
+	}
+
+	public void setDataAdmissao(LocalDate dataAdmissao) {
+		this.dataAdmissao = dataAdmissao;
+	}
+
+	public String getJornadaTrabalho() {
+		return jornadaTrabalho;
+	}
+
+	public void setJornadaTrabalho(String jornadaTrabalho) {
+		this.jornadaTrabalho = jornadaTrabalho;
+	}
+
+	public String getTipoContrato() {
+		return tipoContrato;
+	}
+
+	public void setTipoContrato(String tipoContrato) {
+		this.tipoContrato = tipoContrato;
+	}
+
+	public BigDecimal getSalario() {
+		return salario;
+	}
+
+	public void setSalario(BigDecimal salario) {
+		this.salario = salario;
+	}
+
+	public String getBeneficios() {
+		return beneficios;
+	}
+
+	public void setBeneficios(String beneficios) {
+		this.beneficios = beneficios;
+	}
+
+	public String getLocalTrabalho() {
+		return localTrabalho;
+	}
+
+	public void setLocalTrabalho(String localTrabalho) {
+		this.localTrabalho = localTrabalho;
+	}
+
+	public String getRegimeTrabalho() {
+		return regimeTrabalho;
+	}
+
+	public void setRegimeTrabalho(String regimeTrabalho) {
+		this.regimeTrabalho = regimeTrabalho;
+	}
+
+	public LocalDate getDataAssinaturaContrato() {
+		return dataAssinaturaContrato;
+	}
+
+	public void setDataAssinaturaContrato(LocalDate dataAssinaturaContrato) {
+		this.dataAssinaturaContrato = dataAssinaturaContrato;
+	}
+
+	public String getExameAdmissional() {
+		return exameAdmissional;
+	}
+
+	public void setExameAdmissional(String exameAdmissional) {
+		this.exameAdmissional = exameAdmissional;
+	}
+
+	public String getComprovanteEndereco() {
+		return comprovanteEndereco;
+	}
+
+	public void setComprovanteEndereco(String comprovanteEndereco) {
+		this.comprovanteEndereco = comprovanteEndereco;
+	}
+
+	public String getFotoFunc() {
+		return fotoFunc;
+	}
+
+	public void setFotoFunc(String fotoFunc) {
+		this.fotoFunc = fotoFunc;
+	}
+
+	public String getDependentes() {
+		return dependentes;
+	}
+
+	public void setDependentes(String dependentes) {
+		this.dependentes = dependentes;
+	}
+
+	public String getObservacoes() {
+		return observacoes;
+	}
+
+	public void setObservacoes(String observacoes) {
+		this.observacoes = observacoes;
+	}
+    
+    
+    //Getters e Settes
+    
+    
+
+}

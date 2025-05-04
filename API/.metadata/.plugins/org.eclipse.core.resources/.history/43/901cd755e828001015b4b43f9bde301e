@@ -1,0 +1,5 @@
+package br.com.petamigo.login.infrastruture.repository;
+
+public interface AcessoFuncionarioRepository {
+
+}
