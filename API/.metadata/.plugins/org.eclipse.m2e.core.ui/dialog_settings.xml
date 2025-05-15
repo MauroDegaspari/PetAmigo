@@ -2,8 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="D:\Desenvolvimento Software\HotelariaDegaspari"/>
 			<item value="D:\Desenvolvimento Software\PetAmigo\API\login"/>
+			<item value="D:\Desenvolvimento Software\HotelariaDegaspari"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

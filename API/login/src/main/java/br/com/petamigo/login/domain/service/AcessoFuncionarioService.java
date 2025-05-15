@@ -26,9 +26,9 @@ public class AcessoFuncionarioService {
 	
 	
 	@Transactional(readOnly = true)
-	public Optional<AcessoFuncionarioModel> loginFuncionario( String email){
+	public Optional<AcessoFuncionarioModel> loginFuncionario( String email, String senha){
 		
-		Optional<AcessoFuncionarioModel> login = repo.loginFuncionario(email);
+		Optional<AcessoFuncionarioModel> login = repo.loginFuncionario(email, senha);
 		
 		return login;
 	};

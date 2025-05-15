@@ -7,10 +7,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.petamigo.login.domain.service.AcessoFuncionarioService;
-import br.com.petamigo.login.infrastruture.model.AcessoClienteModel;
 import br.com.petamigo.login.infrastruture.model.AcessoFuncionarioModel;
 
 @Controller
@@ -29,9 +30,10 @@ public class AcessoFuncionarioController {
 				: new ResponseEntity<List<AcessoFuncionarioModel>>(funcionarios, HttpStatus.OK);
 	}
 	
-	@GetMapping(value ="/LoginFuncionario/{email}")
-	public ResponseEntity<AcessoClienteModel> loginCliente(String usuario, String senha) {
-		return null;
+	@PostMapping(value ="/Login")
+	public ResponseEntity<AcessoFuncionarioModel> login(@RequestBody AcessoFuncionarioModel funcionario) {
+		return serviceFuncionario.loginFuncionario(funcionario.getEmail(), funcionario.getShCliente()).map(mapearFunc -> ResponseEntity.ok().body(mapearFunc))
+				.orElse(ResponseEntity.notFound().build());
 	}
 
 }
