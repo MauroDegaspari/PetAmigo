@@ -47,8 +47,8 @@ public class AcessoFuncionarioModel {
     @Column(name = "endereco_func", length = 200)
     private String endereco;
 
-    @Column(name = "sh_cliente", nullable = false, length = 255)
-    private String shCliente;
+    @Column(name = "sh_funcionario", nullable = false, length = 255)
+    private String shFucionario;
 
     @Column(name = "telefone_func", length = 20)
     private String telefone;
@@ -212,12 +212,12 @@ public class AcessoFuncionarioModel {
 		this.endereco = endereco;
 	}
 
-	public String getShCliente() {
-		return shCliente;
+	public String getShFucionario() {
+		return shFucionario;
 	}
 
-	public void setShCliente(String shCliente) {
-		this.shCliente = shCliente;
+	public void setShFucionario(String shFucionario) {
+		this.shFucionario = shFucionario;
 	}
 
 	public String getTelefone() {

@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.petamigo.login.domain.service.AcessoFuncionarioService;
 import br.com.petamigo.login.infrastruture.model.AcessoFuncionarioModel;
+import io.swagger.v3.oas.annotations.Operation;
+
 
 @Controller
 @RequestMapping("/loginFuncionario")
@@ -21,6 +23,7 @@ public class AcessoFuncionarioController {
 	@Autowired
 	private AcessoFuncionarioService serviceFuncionario;
 	
+	@Operation(summary = "Listar todos os funcionarios", method = "GET")
 	@GetMapping(value = "/listarTodosFuncionarios")
 	public ResponseEntity<List<AcessoFuncionarioModel>> testeFuincionario(){
 		
@@ -29,10 +32,10 @@ public class AcessoFuncionarioController {
 		return funcionarios.isEmpty() ? ResponseEntity.status(HttpStatus.NOT_FOUND).body(null)
 				: new ResponseEntity<List<AcessoFuncionarioModel>>(funcionarios, HttpStatus.OK);
 	}
-	
+	@Operation(summary = "Login Funcionarios", method = "POST")
 	@PostMapping(value ="/Login")
 	public ResponseEntity<AcessoFuncionarioModel> login(@RequestBody AcessoFuncionarioModel funcionario) {
-		return serviceFuncionario.loginFuncionario(funcionario.getEmail(), funcionario.getShCliente()).map(mapearFunc -> ResponseEntity.ok().body(mapearFunc))
+		return serviceFuncionario.loginFuncionario(funcionario.getEmail(), funcionario.getShFucionario()).map(mapearFunc -> ResponseEntity.ok().body(mapearFunc))
 				.orElse(ResponseEntity.notFound().build());
 	}
 
