@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.petamigo.login.domain.service.AcessoClienteService;
 import br.com.petamigo.login.infrastruture.model.AcessoClienteModel;
+import io.swagger.v3.oas.annotations.Operation;
 
 @Controller
 @RequestMapping("/loginCliente")
@@ -19,6 +20,7 @@ public class AcessoClienteController {
 	@Autowired
 	private AcessoClienteService serviceClientes;
 	
+	@Operation(summary = "Lista dos os Clientes", method ="GET")
 	@GetMapping(value = "/listarTodosClientes")
 	public ResponseEntity<List<AcessoClienteModel>> testeCLientes(){
 		

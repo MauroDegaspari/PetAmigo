@@ -11,7 +11,7 @@ CREATE TABLE dbapa.funcionarios (
   rg                       VARCHAR2(20)  NULL,
   titulo_eleitor           VARCHAR2(20)  NULL,
   endereco_func            VARCHAR2(200) NULL,
-  sh_cliente               VARCHAR2(255) NOT NULL,
+  sh_funcionario           VARCHAR2(255) NOT NULL,
   telefone_func            VARCHAR2(20)  NULL,
   email_func               VARCHAR2(100) NOT NULL,
   sn_ativo_func            VARCHAR2(1)   DEFAULT 'S' NOT NULL,

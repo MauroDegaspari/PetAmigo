@@ -15,7 +15,7 @@ public interface AcessoFuncionarioRepository extends JpaRepository<AcessoFuncion
     @Query(value =" SELECT *"
     		+ "       FROM dbapa.funcionarios"
     		+ "      WHERE email_func = :email"
-    		+ "		   AND sh_cliente = :senha", nativeQuery = true)
+    		+ "		   AND sh_funcionario = :senha", nativeQuery = true)
 	Optional<AcessoFuncionarioModel> loginFuncionario(@Param("email") String email,
 													  @Param("senha") String senha);
 
